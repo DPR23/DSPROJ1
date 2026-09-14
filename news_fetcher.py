@@ -4,11 +4,14 @@ import pandas as pd
 from datetime import datetime
 from email.utils import parsedate_to_datetime
 
+import urllib.parse
+
 def fetch_news(query, num_articles=20):
     """
     Fetches news from Google News RSS feed for a given query.
     """
-    url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+    encoded_query = urllib.parse.quote(query)
+    url = f"https://news.google.com/rss/search?q={encoded_query}&hl=en-US&gl=US&ceid=US:en"
     feed = feedparser.parse(url)
     
     articles = []
