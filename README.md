@@ -1,3 +1,7 @@
+link-https://dsproj1.streamlit.app/
+
+
+
 # Real-Time News Sentiment Dashboard 📰
 
 A Python-based web application that fetches live news headlines from Google News for any topic and performs natural language processing (NLP) to analyze the sentiment (Positive, Negative, Neutral) of each headline. 
